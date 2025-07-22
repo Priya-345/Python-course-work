@@ -1,0 +1,65 @@
+# Control Statements
+#Bus seats booking
+seats= {
+    "U1":{'price':1029,'booking_status':False},
+    "U2":{'price':1029,'booking_status':True},
+    "U3":{'price':1029,'booking_status':True}
+
+}
+for i in seats:
+    if seats[i]['booking_status']:
+        print(f'*{i}*')
+    else:
+        print(f'{i}-{seats[i]["price"]}')
+seatno = input("Enter the seat no:").upper()
+if seatno in seats:
+    if seats[seatno]['booking_status']:
+        print(f"{seatno} is already booked. Go for other one!!")
+    else:
+        name = input("Enter the name:").title()
+        age=int(input("Enter The age:"))
+        gender = input("Enter The gender(F or M):").upper()
+        if age<=5:
+            print(f'Hello {name} your seat booked sucessfully with free of cost')
+        elif age < 15:
+            print(f'Hello {name} you seat booked sucessfully wth 50 % disscount\nTotal price={seats[seatno]["price"]*0.5}')
+        else:
+            print(f'Hello {name} you seat is booked suceccfull.pay the amount-{seats[i]["price"]}')      
+else:
+    print("Enter the seat no properly ")     
+
+
+
+#Prime Number
+n = int(input("Enter the Number: "))
+c = 0
+for i in range(2,n//2+1):
+    if n%i==0:
+        c=1
+        break
+if c==0:
+    print("prime number")  
+else:
+    print("not a prime number")      
+n = int(input("Enter the Number: "))
+isprime = False
+for i in range(2,n//2+1):
+    if n%i==0:
+        prime=True
+        break
+if isprime:
+    print("prime number")  
+else:
+    print("not a prime number") 
+
+#Fobanacci series
+n = int(input("Enter the number:"))
+fact = 1
+for i in range(1,n+1):
+    fact = fact * i
+print("f{n}! = {fact}")    
+n = int(input("Enter the number:"))
+sum = 0
+for i in range(1,n+1):
+    sum = sum + i
+print(sum)
