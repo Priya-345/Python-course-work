@@ -63,3 +63,42 @@ sum = 0
 for i in range(1,n+1):
     sum = sum + i
 print(sum)
+
+
+#Game
+moves = 34
+winningpoint = int(input("Enter the winning point:"))
+while moves>0:
+    if moves==winningpoint:
+        print("congrats!!!You Won the game")
+        break
+    print(f"(moves) are left.You have a chance to win the game")
+    moves-1==1
+else:
+    print("Game over.Try again")
+
+
+#
+n=5
+while n>0:
+    print(n)
+    n=n-1   #5 4 3 2 1
+
+#
+n=1
+while n<7:
+    print(n**2)
+    n=n+1
+
+
+#
+n=int(input())
+s=0
+while n>0:
+    s+=(n%10)
+    n//=10
+print(s)
+
+#
+
+

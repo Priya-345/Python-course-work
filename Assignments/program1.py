@@ -1,78 +1,69 @@
-# Vehicle Information System
+# Amazon Order System
 
-# Task 1: Take Vehicle Details as Input
+# Input Section
+order_id = int(input("Enter Order ID: "))
+customer_name = input("Enter Customer Name: ")
+order_total = float(input("Enter Total Amount: "))
 
-vehicle_id = int(input("Enter Vehicle ID: "))
-vehicle_name = input("Enter Vehicle Name: ")
-price = float(input("Enter Vehicle Price: "))
+# List input
+ordered_items = [item.strip() for item in input("Enter Ordered Items (comma-separated): ").split(',')]
 
-# List
-categories = [cat.strip() for cat in input("Enter Vehicle Categories (comma-separated): ").split(',')]
+# Tuple input
+shipping_address = (
+    input("Enter Delivery City: "),
+    input("Enter Zip Code: ")
+)
 
-# Tuple
-stock_available = int(input("Enter Stock Available: "))
-stock_sold = int(input("Enter Stock Sold: "))
-stock_details = (stock_available, stock_sold)
+# Float input
+discount_percent = float(input("Enter Discount Percentage: "))
 
-# Float
-discount_percentage = float(input("Enter Discount Percentage: "))
+# Set input
+payment_modes = set(mode.strip() for mode in input("Enter Payment Methods Used (comma-separated): ").split(','))
 
-# Set
-features = set(f.strip() for f in input("Enter Vehicle Features (comma-separated): ").split(','))
-
-# Dictionary
-supplier_name = input("Enter Supplier Name: ")
-supplier_contact = input("Enter Supplier Contact Number: ")
-supplier_location = input("Enter Supplier Location: ")
-supplier_details = {
-    "Name": supplier_name,
-    "Contact": supplier_contact,
-    "Location": supplier_location
+# Dictionary input
+seller_name = input("Enter Seller Name: ")
+seller_rating = input("Enter Seller Rating (e.g., 4.5/5): ")
+seller_details = {
+    "Seller": seller_name,
+    "Rating": seller_rating
 }
 
-# Task 2: Display Vehicle Details Using Formatting
-
-print("\n--- Vehicle Information ---")
+# Output Section
+print("\n--- Amazon Order Summary ---")
 
 # 1. Comma Separation (sep=',')
-print("Vehicle ID, Name, Price:", vehicle_id, vehicle_name, price, sep=',')
+print("Order ID, Customer, Amount:", order_id, customer_name, order_total, sep=',')
 
-# 2. Percentage Formatting (% operator)
-print("Discount Offered: %.2f%%" % discount_percentage)
+# 2. Percentage Formatting (%)
+print("Discount Applied: %.2f%%" % discount_percent)
 
 # 3. f-strings (f"")
-print(f"Vehicle Name: {vehicle_name}")
-print(f"Price: ₹{price}")
-print(f"Discount: {discount_percentage}%")
-print(f"Stock Available: {stock_details[0]} units")
-print(f"Vehicle Categories: {categories}")
-print(f"Features: {features}")
+print(f"Customer Name: {customer_name}")
+print(f"Items Ordered: {ordered_items}")
+print(f"Delivery Address: {shipping_address[0]} - {shipping_address[1]}")
+print(f"Payment Methods Used: {payment_modes}")
 
 # 4. .format() method
-print("Supplier Details: Name - {}, Contact - {}, Location - {}".format(
-    supplier_details["Name"], supplier_details["Contact"], supplier_details["Location"]
+print("Seller Details: Name - {}, Rating - {}".format(
+    seller_details["Seller"], seller_details["Rating"]
 ))
 
-#Enter Vehicle ID: 301  
-#Enter Vehicle Name: Swift ZXI  
-#Enter Vehicle Price: 829999.99  
-#Enter Vehicle Categories (comma-separated): Hatchback, Petrol, Manual  
-#Enter Stock Available: 40  
-#Enter Stock Sold: 18  
-#Enter Discount Percentage: 7.5  
-#Enter Vehicle Features (comma-separated): ABS, Airbags, Touchscreen, Alloy Wheels  
-#Enter Supplier Name: Maruti Showroom  
-#Enter Supplier Contact Number: 98789234567, 
-#Enter Supplier Location: Hyderabad
+#Enter Order ID: 99881
+#Enter Customer Name: Priyanka
+#Enter Total Amount: 5499.75
+#Enter Ordered Items (comma-separated): Laptop Bag,Mouse
+#Enter Delivery City: Bengaluru
+#Enter Zip Code: 560001
+#Enter Discount Percentage: 12.5
+#Enter Payment Methods Used (comma-separated): Credit Card,Amazon Pay
+#Enter Seller Name: Cloud
+#Enter Seller Rating (e.g., 4.5/5): 4.6/5
 
-
-#--- Vehicle Information ---
-#Vehicle ID, Name, Price:,301, Swift ZXI  ,829999.99
-#Discount Offered: 8.00%
-#Vehicle Name:  Swift ZXI
-#Price: ₹829999.99
-#Discount: 8.0%
-#Stock Available: 40 units
-#Vehicle Categories: ['Hatchback', 'Petrol', 'Manual']
-#Features: {'Airbags', 'Touchscreen', 'ABS', 'Alloy Wheels'}
-#Supplier Details: Name - Maruti Showroom  , Contact - 98789234567, Location - Hyderabad
+#--- Amazon Order Summary ---
+#Order ID, Customer, Amount:,99881,Priyanka,5499.75
+#Discount Applied: 12.50%
+#Customer Name: Priyanka
+#Items Ordered: ['Laptop Bag', 'Mouse']
+#Delivery Address: Bengaluru - 560001
+#Payment Methods Used: {'Amazon Pay', 'Credit Card'}
+#Seller Details: Name - Cloud, Rating - 4.6/5
