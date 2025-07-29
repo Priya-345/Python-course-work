@@ -88,7 +88,7 @@ while n>0:
 n=1
 while n<7:
     print(n**2)
-    n=n+1
+    n=n+1   # 1 4 9 16 25 36
 
 
 #
@@ -97,7 +97,7 @@ s=0
 while n>0:
     s+=(n%10)
     n//=10
-print(s)
+print(s)   #15 #6
 
 #
 n=int(input())
@@ -114,15 +114,15 @@ else:
 
 #
 n=input()
-full=len(n)-1
+full=len(n)
 length=len(n)//2
 ind=0
 while ind<=length:
-    if n[ind]!=n[full]:
+    if n[ind] !=n[full]:
         print("Not palindrome")
         break
-    ind+=1
-    full=-1
+    ind +=1
+    full =-1
 else:
     print('Palindrome')
 
