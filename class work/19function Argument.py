@@ -15,6 +15,7 @@ student_course=input("Course: ")
 student_details(name,rollno,marks,grade,student_course)
 student_details("xyz",65,100,'A','Java')
 
+
  # 2.Keyword Agr
 def student_details(name,rollno,marks,grade,course):
     print('Name:',name)
@@ -31,6 +32,8 @@ student_course=input("Course: ")
 student_details(name=name,rollno=rollno,marks=marks,grade=grade,course=student_course)
 student_details(rollno=rollno,name=name,grade=grade,course=student_course,marks=marks)
 student_details(rollno=56,name='ramya',grade='A',course='Mysql',marks=99)
+
+
 
 # 3.Default Agr
 def student_details(name,rollno,marks=0,grade="F",course='Python'):
@@ -51,6 +54,7 @@ student_details(name,rollno,marks)
 student_details(name,rollno,marks,grade)
 student_details(name,rollno,marks,grade,course)
 
+
 # 4.Variable Lenght
 def names(*stdnames):
     print("\nName of students")
@@ -62,6 +66,8 @@ names('kalyan','Adarsh','saikumar','nihitha','keethana','leorah')
 names('kalyan','nihitha','keethana','leorah')
 names('Ramya','nihitha','keethana','leorah')
 names('Ramya','nihitha','keethana','Sunitha','maheswari')
+
+
 
 # example
 def display_products(**product):
