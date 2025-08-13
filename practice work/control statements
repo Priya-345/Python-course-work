@@ -1,3 +1,4 @@
+
 #1.print Number from 1 to N (using for loop)
 n = int(input("Enter a Number: "))
 for n in range(1,n+1):
@@ -25,7 +26,7 @@ sum = 0
 for i in range(1,a+1):
     sum = sum + i
 print(sum)    
-#output:Enter the number:5 --15
+#output:Enter the number:5= 0
 
 #4.print odd numbers from 1 to n (using for loop)
 a = int(input("Enter the number:"))
@@ -47,12 +48,25 @@ print(f"{n}! = {fact}")
 n = int(input("Enter a Number:"))   
 for i in range(1,10):
       print(f"{n} * {i} = {n * i}")
+'''output:
+3 * 1 = 3
+3 * 2 = 6
+3 * 3 = 9
+3 * 4 = 12
+3 * 5 = 15
+3 * 6 = 18
+3 * 7 = 21
+3 * 8 = 24
+3 * 9 = 27'''
 
 #7.Check prime number using for loop
 n = int(input("Enter a number:"))
 for i in range(n,n+1):
     if n % i == 0:
         print("prime number")
+'''Enter a number:24
+prime number'''  
+
 
  #8. Sum of Digits of a Number (Using while loop)
 n=int(input())
@@ -172,3 +186,109 @@ while b!=0:
     a,b=b,a%b
 print(a)
 
+
+#21. Print Right-Angled Triangle Pattern (Using for loop)
+N = int(input("Enter the number of rows: "))
+for i in range(1, N + 1):
+    print('*' * i)
+
+#22. Print Hollow Square Pattern (Using for loop)
+N = int(input("Enter the size of the square: "))
+
+for i in range(N):
+    if i == 0 or i == N - 1:
+        print('*' * N)
+    else:
+        print('*' + ' ' * (N - 2) + '*')
+
+#23. Check if a Number is Perfect (Using for loop)
+N = int(input("Enter a number: "))
+
+sum_of_divisors = 0
+
+for i in range(1, N):
+    if N % i == 0:
+        sum_of_divisors += i
+
+
+if sum_of_divisors == N:
+    print("Perfect")
+else:
+    print("Not Perfect")
+
+#24. Count Digits in a Number (Using while loop)
+n = int(input("Enter a number: "))
+n = abs(n)
+
+if n == 0:
+    count = 1
+else:
+    count = 0
+    while n > 0:
+        n = n // 10
+        count += 1
+print("Count of digits:", count)
+
+#25. Print Numbers Divisible by 7 (Using for loop)
+N = int(input("Enter a number: "))
+
+print("Numbers divisible by 7 up to", N, "are:")
+
+for i in range(1, N + 1):
+    if i % 7 == 0:
+        print(i)
+
+#26. Find the LCM of Two Numbers (Using while loop)
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+
+lcm = max(a, b)
+
+while True:
+    if lcm % a == 0 and lcm % b == 0:
+        break
+    lcm += 1
+
+print("LCM of", a, "and", b, "is:", lcm)
+
+#27. Print Even Numbers in Reverse Order (Using while loop)
+N = int(input("Enter a number: "))
+while N >= 1:
+    if N % 2 == 0:
+        print(N)
+    N -= 1
+
+#28. Sum of First N Odd Numbers (Using for loop)
+N = int(input("Enter the number of odd numbers to sum: "))
+
+sum_odd = 0
+
+for i in range(N):
+    odd_number = 2 * i + 1
+    sum_odd += odd_number
+
+print("Sum of the first", N, "odd numbers is:", sum_odd)
+
+#29. Print a Square Pattern of Numbers (Using for loop)
+N = int(input("Enter the value of N: "))
+
+num = 1
+for i in range(N):
+    for j in range(N):
+        print(num, end=' ')
+        num += 1
+    print() 
+
+#30. Check if a Number is Armstrong (Using for loop)
+n = int(input("Enter a number: "))
+num_str = str(n)
+num_digits = len(num_str)
+
+sum_of_powers = 0
+for digit in num_str:
+    sum_of_powers += int(digit) ** num_digits
+
+if sum_of_powers == n:
+    print("Armstrong")
+else:
+    print("Not Armstrong")

@@ -65,7 +65,7 @@ print(tupup)
 s={'python','html','css','java','mysql'}
 setup = set(map(lambda i:i.upper(),s))
 print(setup)
-#{'CSS', 'HTML', 'PYTHON', 'JAVA', 'MYSQL'}
+#{'PYTHON', 'JAVA', 'MYSQL', 'HTML', 'CSS'}
 
 #Filter using lambda Function
 
@@ -75,7 +75,7 @@ print(ffmrt)
 
 cfrmt = list(filter(lambda i: i not in vol,s))
 print(cfrmt)
-#['python', 'java', 'mysql', 'css', 'html']
+#['python', 'mysql', 'css', 'java', 'html']
 
 
 elst = list(filter(lambda i: i%2==0 ,l ))
