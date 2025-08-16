@@ -1,202 +1,78 @@
 questions = [
     {
-        "question": "What is the output of: print(type([]))?",
-        "options": {
-            "a": "<class 'list'>",
-            "b": "<class 'tuple'>",
-            "c": "<class 'dict'>",
-            "d": "<class 'set'>"
-        },
-        "answer": "a"
+        "q": "Which keyword is used to create a function in Python?",
+        "options": ["A) func", "B) def", "C) function", "D) define"],
+        "answer": "B"
     },
     {
-        "question": "Which keyword is used to define a function in Python?",
-        "options": {
-            "a": "function",
-            "b": "define",
-            "c": "def",
-            "d": "fun"
-        },
-        "answer": "c"
+        "q": "What is the default return value of a function that doesn't have a return statement?",
+        "options": ["A) 0", "B) undefined", "C) None", "D) False"],
+        "answer": "C"
     },
     {
-        "question": "What does the 'len()' function do in Python?",
-        "options": {
-            "a": "Returns the size of a file",
-            "b": "Returns the number of items in an object",
-            "c": "Returns the memory location",
-            "d": "Returns the type of object"
-        },
-        "answer": "b"
+        "q": "Which of the following is a correct way to call a function named `my_func`?",
+        "options": ["A) call my_func()", "B) my_func[]", "C) my_func()", "D) my_func{}"],
+        "answer": "C"
     },
     {
-        "question": "Which data structure does not allow duplicate elements?",
-        "options": {
-            "a": "List",
-            "b": "Tuple",
-            "c": "Dictionary",
-            "d": "Set"
-        },
-        "answer": "d"
+        "q": "What will `print(type(lambda x: x))` output?",
+        "options": ["A) <class 'function'>", "B) <class 'lambda'>", "C) <function>", "D) <lambda>"],
+        "answer": "A"
     },
     {
-        "question": "What is the output of: bool(0)?",
-        "options": {
-            "a": "True",
-            "b": "False",
-            "c": "None",
-            "d": "0"
-        },
-        "answer": "b"
+        "q": "Which of the following is used to return a value from a function?",
+        "options": ["A) return", "B) yield", "C) break", "D) pass"],
+        "answer": "A"
     },
     {
-        "question": "Which of these is a mutable data type?",
-        "options": {
-            "a": "str",
-            "b": "tuple",
-            "c": "list",
-            "d": "int"
-        },
-        "answer": "c"
+        "q": "What is the output of this code?\n\ndef add(a, b=2):\n    return a + b\n\nprint(add(3))",
+        "options": ["A) 5", "B) 3", "C) Error", "D) None"],
+        "answer": "A"
     },
     {
-        "question": "Which method is used to add an item to a list?",
-        "options": {
-            "a": "append()",
-            "b": "add()",
-            "c": "insert()",
-            "d": "extend()"
-        },
-        "answer": "a"
+        "q": "Which type of arguments can be passed using *args?",
+        "options": ["A) Only keyword arguments", "B) Variable number of positional arguments", "C) Fixed arguments", "D) Named arguments"],
+        "answer": "B"
     },
     {
-        "question": "What is the purpose of 'pass' in Python?",
-        "options": {
-            "a": "To exit a loop",
-            "b": "To skip an iteration",
-            "c": "A placeholder for future code",
-            "d": "To return a value"
-        },
-        "answer": "c"
+        "q": "What does the following function return?\n\ndef test():\n    pass",
+        "options": ["A) pass", "B) Error", "C) None", "D) 0"],
+        "answer": "C"
     },
     {
-        "question": "How do you start a comment in Python?",
-        "options": {
-            "a": "/*",
-            "b": "//",
-            "c": "--",
-            "d": "#"
-        },
-        "answer": "d"
+        "q": "What is the output of this code?\n\ndef outer():\n    def inner():\n        return 'Hello'\n    return inner()\n\nprint(outer())",
+        "options": ["A) Hello", "B) inner", "C) outer", "D) Error"],
+        "answer": "A"
     },
     {
-        "question": "What is the output of: 2 ** 3?",
-        "options": {
-            "a": "6",
-            "b": "8",
-            "c": "9",
-            "d": "5"
-        },
-        "answer": "b"
-    },
-    {
-        "question": "Which module in Python is used for regular expressions?",
-        "options": {
-            "a": "regex",
-            "b": "pyregex",
-            "c": "re",
-            "d": "regexp"
-        },
-        "answer": "c"
-    },
-    {
-        "question": "What is a lambda function?",
-        "options": {
-            "a": "A function defined without a name",
-            "b": "A function with two parameters",
-            "c": "A recursive function",
-            "d": "A default function"
-        },
-        "answer": "a"
-    },
-    {
-        "question": "What is the output of: 'Python'[::-1]?",
-        "options": {
-            "a": "'nohtyP'",
-            "b": "'Python'",
-            "c": "Error",
-            "d": "'nohty'"
-        },
-        "answer": "a"
-    },
-    {
-        "question": "Which of the following is used to handle exceptions?",
-        "options": {
-            "a": "try-except",
-            "b": "do-catch",
-            "c": "try-catch",
-            "d": "handle-except"
-        },
-        "answer": "a"
-    },
-    {
-        "question": "What is the output of: len(set([1,2,2,3]))?",
-        "options": {
-            "a": "4",
-            "b": "3",
-            "c": "2",
-            "d": "1"
-        },
-        "answer": "b"
-    },
-    {
-        "question": "Which of the following is not a valid Python loop?",
-        "options": {
-            "a": "while",
-            "b": "for",
-            "c": "loop",
-            "d": "None of the above"
-        },
-        "answer": "c"
-    },
-    {
-        "question": "What will be the output of: print(10 // 3)?",
-        "options": {
-            "a": "3.33",
-            "b": "3",
-            "c": "4",
-            "d": "Error"
-        },
-        "answer": "b"
-    },
-    {
-        "question": "How do you define a dictionary?",
-        "options": {
-            "a": "Using ()",
-            "b": "Using []",
-            "c": "Using {} with key-value pairs",
-            "d": "Using {} with values only"
-        },
-        "answer": "c"
-    },
-    {
-        "question": "Which built-in function returns the largest item?",
-        "options": {
-            "a": "max()",
-            "b": "biggest()",
-            "c": "large()",
-            "d": "top()"
-        },
-        "answer": "a"
-    },
-    {
-        "question": "What does 'break' do in a loop?",
-        "options": {
-            "a": "Skips current iteration",
-            "b": "Exits the loop",
-            "c": "Continues next loop",
-            "d": "Breaks the function"
-        },
-        "answer": "b"
-    },
+        "q": "Which of the following best describes recursion?",
+        "options": ["A) A function that calls itself", "B) A loop inside a function", "C) A class inside a function", "D) A function that returns another function"],
+        "answer": "A"
+    }
 ]
+
+score = 0
+
+for i, key in enumerate(questions):
+    print(f"\nQuestion {i+1}: {key['q']}")
+    for opt in key['options']:
+        print(opt)
+    user_ans = input("Your answer (A/B/C/D): ").strip().upper()
+    
+    if user_ans == key['answer']:
+        print("Correct answer ")
+        score += 1
+    else:
+        print(f"Wrong ! Correct answer is {key['answer']}")
+
+print("\n--- Quiz Completed ---")
+print(f"Your Score: {score}/10")
+
+if score == 10:
+    print(" Excellent! You got 10/10")
+elif score >= 6:
+    print("Average performance")
+elif score >= 4:
+    print(" Needs improvement")
+else:
+    print(" Fail — Keep practicing!")
