@@ -1,4 +1,4 @@
-##
+## Ex
 class Driver:
     def display(self,name,gender,vehno,vehtype):
         self.name=name
@@ -28,7 +28,7 @@ A123
 3-Wheels  -90
 4-Wheels  -120'''
 
-#   
+#  using super() keyword
 class A:
     def print_(self):
         print("This the parent class->A")
@@ -61,3 +61,7 @@ class C(A,B):
         print("This the grand class-C")
 c=C()
 c.print_()
+'''
+This the parent class-A
+This the child class-B
+This the grand class-C '''
