@@ -38,3 +38,18 @@ print(os.getcwd())
 import os
 print(os.getcwd())
 print(os.listdir('.'))
+
+## create a new file inside my floder
+
+import os
+filepath=os.path.join('1415','demo.txt')
+with open(filepath,'w+') as f:
+    f.write("Hello world")
+    f.seek(0)
+    print(f.read())
+
+## remove file
+
+import os
+filepath=os.path.join('1415','demo.txt')
+os.remove(filepath())
